@@ -1,0 +1,154 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>DotStrip — an LED sign in your Mac's menu bar</title>
+<link rel="canonical" href="https://dotstrip.app/">
+<meta name="description" content="DotStrip puts a real dot-matrix LED board in your macOS menu bar and scrolls what you're playing, the news, stock quotes and the weather through it.">
+<meta name="theme-color" content="#070605">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://dotstrip.app/">
+<meta property="og:image" content="https://dotstrip.app/assets/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://dotstrip.app/assets/og.png">
+<meta property="og:title" content="DotStrip — an LED sign in your Mac's menu bar">
+<meta property="og:description" content="A real dot-matrix LED board in your menu bar: now playing, headlines, stocks and weather.">
+<link rel="icon" href="assets/icon.png">
+<link rel="stylesheet" href="assets/style.css">
+<link rel="stylesheet" href="assets/menubar.css">
+</head>
+<body>
+<div class="wrap">
+  <nav>
+    <a class="brand" href="/"><img src="assets/icon.png" alt="">DotStrip</a>
+    <ul>
+      <li><a href="#widgets">Widgets</a></li>
+      <li><a href="#menu">Settings</a></li>
+      <li><a href="#pricing">Try it</a></li>
+      <li><a href="#faq">FAQ</a></li>
+      <li><a class="btn primary" style="padding:8px 16px;font-size:14px" href="#pricing">Download</a></li>
+    </ul>
+  </nav>
+
+  <header class="hero">
+    <div class="eyebrow">For macOS 13+</div>
+    <h1>A real LED sign,<br>in your menu bar.</h1>
+    <p class="lede">DotStrip lights up a dot-matrix board next to your clock and scrolls what you care about through it: the song playing, headlines, stock quotes and the weather.</p>
+    <div class="cta">
+      <a class="btn primary" href="#" data-download>Download for Mac</a>
+      <a class="btn ghost" href="#widgets">See what it shows</a>
+    </div>
+    <p class="fine">7-day free trial. No account needed to try it.</p>
+
+    <div class="menubar-clip"><div class="menubar"><img src="assets/strip.svg" alt=""><div class="panel"><canvas id="bar-board" role="img" aria-label="The DotStrip panel in the macOS menu bar, scrolling a track title next to an AAPL stock quote and the temperature"></canvas></div></div></div>
+
+    <div class="zoom" id="colors">
+      <div class="board"><canvas id="hero-board" role="img" aria-label="A live, zoomed-in copy of the DotStrip panel"></canvas></div>
+      <div class="zoom-label">
+        <span>Live and zoomed in. Every dot is a dot in the app.</span>
+        <div class="swatches" role="group" aria-label="Board color">
+          <span>Color</span>
+          <button data-theme="amber" style="--c:#ffb838" aria-label="Amber" aria-pressed="true"></button>
+          <button data-theme="green" style="--c:#47ff70" aria-label="Green"></button>
+          <button data-theme="red"   style="--c:#ff4536" aria-label="Red"></button>
+          <button data-theme="ice"   style="--c:#6bd1ff" aria-label="Ice"></button>
+          <button data-theme="mono"  style="--c:#f0f2ff" aria-label="White"></button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <section id="widgets">
+    <div class="eyebrow">Widgets</div>
+    <h2>Four things worth a glance.</h2>
+    <p class="sub">Turn on as many as you like. They share the board side by side, each in its own zone, and a playing track takes the wide lane from the news until the music stops.</p>
+    <div class="grid">
+      <div class="card"><div class="board"><canvas id="card-music" role="img" aria-label="Now Playing widget: a scrolling track title"></canvas></div>
+        <h3>Now Playing</h3><p>The track and artist from Spotify or Apple Music, with a thin progress bar riding along the top row.</p></div>
+      <div class="card"><div class="board"><canvas id="card-news" role="img" aria-label="News ticker widget: scrolling headlines"></canvas></div>
+        <h3>News ticker</h3><p>Headlines from any RSS or Atom feed you point it at, crawling past like a newsroom sign.</p></div>
+      <div class="card"><div class="board"><canvas id="card-stocks" role="img" aria-label="Stocks widget: scrolling quotes"></canvas></div>
+        <h3>Stocks</h3><p>Quotes for the symbols you track, with a little arrow for which way the day is going.</p></div>
+      <div class="card"><div class="board"><canvas id="card-weather" role="img" aria-label="Weather widget: temperature, high and low"></canvas></div>
+        <h3>Weather</h3><p>The temperature in a fixed zone that flips between now, today's high and today's low, with an animated sun and rain. Pick your city from a search so you get the right Springfield.</p></div>
+    </div>
+  </section>
+
+  <section>
+    <div class="eyebrow">Made like hardware</div>
+    <h2>It scrolls like a sign, not like text.</h2>
+    <p class="sub">Most "tickers" are smooth text sliding over a background. DotStrip is built the way a physical board works.</p>
+    <div class="facts">
+      <div class="fact"><b>Whole-dot scrolling</b><span>Text steps one dot-column at a time. Nothing is antialiased into place, so it reads as a lattice of lights.</span></div>
+      <div class="fact"><b>A hand-drawn font</b><span>Every letter is a 5&times;7 bitmap drawn dot by dot, the kind real signs use, instead of a font rasterized and hoped for the best.</span></div>
+      <div class="fact"><b>Light on your Mac</b><span>The unlit lattice is drawn once and only the lit dots move, so a board that never stops scrolling stays quiet in Activity Monitor.</span></div>
+    </div>
+  </section>
+
+  <section id="menu">
+    <div class="eyebrow">Settings</div>
+    <h2>Everything lives in one menu.</h2>
+    <p class="sub">Click the panel and you get the lot. No preferences window, no dock icon. The grey rows at the top are a plain-text read-out of whatever has already scrolled past.</p>
+    <div class="menu-feature">
+      <img src="assets/menu.png" alt="The DotStrip menu: widget toggles, news feed and symbols, location and units, layout, color, HDR Glow and scroll speed" loading="lazy">
+      <ul class="bullets">
+        <li><b>Show what you want.</b> Switch each widget on or off, pick any RSS feed, edit your stock symbols.</li>
+        <li><b>Layout.</b> Give each widget its own zone, or let them share one band and take turns.</li>
+        <li><b>Five colors.</b> Amber, Green, Red, Ice and White, each with its own panel tint, as on real signs.</li>
+        <li><b>HDR Glow.</b> On macOS 26 with a capable display, the lit dots push brighter than white.</li>
+        <li><b>Scroll speed</b> to taste.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="pricing">
+    <div class="eyebrow">Try it</div>
+    <h2>Try it for a week. Keep it if you like it.</h2>
+    <p class="sub">Download DotStrip and use all of it free for 7 days. After that it takes a subscription to keep the board lit, and the price is shown in the app and at checkout.</p>
+    <div class="price">
+      <div>
+        <h3>DotStrip</h3>
+        <span style="color:var(--dim)">Everything in the app, nothing held back.</span>
+        <ul>
+          <li>All four widgets and every color scheme</li>
+          <li>Automatic updates through the app</li>
+          <li>Cancel any time</li>
+          <li>Signed and notarized by Apple</li>
+        </ul>
+      </div>
+      <div class="side">
+        <a class="btn primary" href="#" data-download>Download free trial</a>
+        <a class="btn ghost" href="#" data-checkout>Subscribe</a>
+        <p class="fine">Payments handled by Polar.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="faq">
+    <div class="eyebrow">FAQ</div>
+    <h2>Questions.</h2>
+    <details><summary>What do I need?</summary><p>A Mac running macOS 13 Ventura or later. There is no Dock icon and no window: DotStrip is just the board in your menu bar, and clicking it opens the settings.</p></details>
+    <details><summary>What happens after the 7 days?</summary><p>The board stops until you subscribe. You'll get a prompt where you can buy or enter a license key you already have.</p></details>
+    <details><summary>What permissions does it want?</summary><p>Only Automation, the first time Now Playing looks for Spotify or Music. If you say no, that widget stays empty and nothing else is affected.</p></details>
+    <details><summary>Where does the data come from?</summary><p>Weather from Open-Meteo, stock quotes from Yahoo Finance, headlines from the feeds you choose. None of them needs an account or API key, and DotStrip keeps no analytics on you. See the <a href="privacy.html" style="color:var(--on)">privacy policy</a>.</p></details>
+    <details><summary>Will it burn my battery?</summary><p>No. It is designed to redraw as little as possible, and you can pick a slower scroll speed from the menu.</p></details>
+    <details><summary>Is it on the Mac App Store?</summary><p>No, it's a direct download so updates can ship the moment they're ready. It's still signed and notarized, so it opens without a Gatekeeper warning.</p></details>
+  </section>
+</div>
+
+<footer>
+  <div class="wrap">
+    <span>&copy; 2026 Daniel Moreno. DotStrip is not affiliated with Apple, Spotify or Yahoo.</span>
+    <span><a href="privacy.html">Privacy</a><a href="terms.html">Terms</a><a href="support.html">Support</a></span>
+  </div>
+</footer>
+
+<script src="assets/glyphs.js"></script>
+<script src="assets/menubar.js"></script>
+<script src="assets/board.js"></script>
+<script src="assets/site.js"></script>
+</body>
+</html>
