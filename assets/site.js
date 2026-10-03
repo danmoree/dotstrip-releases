@@ -1,5 +1,5 @@
 // Where the Download buttons point. Change it here, once, when a release ships.
-const DOWNLOAD_URL = "https://dotstrip.app/DotStrip-1.1.zip";
+const DOWNLOAD_URL = "https://dotstrip.app/DotStrip-1.2.zip";
 const CHECKOUT_URL = "https://buy.polar.sh/polar_cl_HtOOStKwyMR6Mulgg7t9RXGylPc4l7e6icwK40GtFIe";
 
 document.querySelectorAll("[data-download]").forEach(a => (a.href = DOWNLOAD_URL));

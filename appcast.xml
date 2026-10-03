@@ -3,6 +3,17 @@
     <channel>
         <title>DotStrip</title>
         <item>
+            <title>1.2</title>
+            <pubDate>Fri, 02 Oct 2026 22:21:19 -0600</pubDate>
+            <sparkle:version>3</sparkle:version>
+            <sparkle:shortVersionString>1.2</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>13.0</sparkle:minimumSystemVersion>
+            <enclosure url="https://dotstrip.app/DotStrip-1.2.zip" length="3444877" type="application/octet-stream" sparkle:edSignature="FHOXdmTOTIma3kEsT65S9F2EFRRMqPRq+vt/CxKOBgS1rd406utVe96YtgGtmC19xQfkM5fk5CIng5tlmf71AA=="/>
+            <sparkle:deltas>
+                <enclosure url="https://dotstrip.app/DotStrip3-2.delta" sparkle:deltaFrom="2" length="12410" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="976464" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="HHPpRns7kqiyTzuSN4UjY5Do7oAUjKNTZT7STrQNLUpfEKZEIp4KcMb1YSuS4rIqtUgmHs6NtV+T1V8dWtOcDA=="/>
+            </sparkle:deltas>
+        </item>
+        <item>
             <title>1.1</title>
             <pubDate>Fri, 02 Oct 2026 22:12:23 -0600</pubDate>
             <sparkle:version>2</sparkle:version>
