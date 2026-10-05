@@ -5,4 +5,4 @@
   background: var(--panel); border-radius: 3px;
   box-shadow: 0 0 0 1px rgba(0,0,0,.5), 0 0 24px rgba(var(--on-rgb), .18);
 }
-.menubar .panel canvas { display: block; width: 100%; }
+.menubar .panel .clip { display: block; width: 100%; }

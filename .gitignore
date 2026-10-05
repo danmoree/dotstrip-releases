@@ -1,0 +1,21 @@
+# Keep source and tooling out of this repo. It is published as a website, so anything committed here is public.
+.DS_Store
+*.swift
+*.py
+*.sh
+*.xcodeproj/
+*.xcworkspace/
+DerivedData/
+build/
+tools/
+node_modules/
+frames/
+*.log
+.env*
+*.key
+*.pem
+*.p12
+# the board engine and font data used to record the site's clips
+board.js
+glyphs.js
+render.js
