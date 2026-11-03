@@ -1,16 +1,17 @@
 // Where the Download buttons point. Change it here, once, when a release ships.
-const DOWNLOAD_URL = "https://dotstrip.app/DotStrip-1.2.zip";
-const CHECKOUT_URL = "https://buy.polar.sh/polar_cl_HtOOStKwyMR6Mulgg7t9RXGylPc4l7e6icwK40GtFIe";
+const DOWNLOAD_URL = "https://dotstrip.app/DotStrip-1.3.zip";
+// Polar checkout link for the one-time lifetime license.
+const LIFETIME_URL = "https://buy.polar.sh/polar_cl_p8S9sphZMLdNV5HBPYl6NMeYgsLgnFvmNDsoI3h4sFg";
 
 document.querySelectorAll("[data-download]").forEach(a => (a.href = DOWNLOAD_URL));
-document.querySelectorAll("[data-checkout]").forEach(a => (a.href = CHECKOUT_URL || DOWNLOAD_URL));
+document.querySelectorAll("[data-lifetime]").forEach(a => (a.href = LIFETIME_URL || DOWNLOAD_URL));
 
 // Umami custom events. Optional chaining makes this a no-op if the script is blocked.
 const track = (selector, event) =>
   document.querySelectorAll(selector).forEach(a =>
     a.addEventListener("click", () => window.umami?.track(event, { location: a.closest("section, header, nav")?.id || "page" })));
 track("[data-download]", "Download");
-track("[data-checkout]", "Subscribe");
+track("[data-lifetime]", "Lifetime");
 
 // Board colours. Every board is a looping clip recorded once per colour, so choosing a colour
 // swaps the page's accent and points each clip at that colour's recording.

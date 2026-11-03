@@ -3,6 +3,30 @@
     <channel>
         <title>DotStrip</title>
         <item>
+            <title>1.3</title>
+            <pubDate>Tue, 03 Nov 2026 16:02:14 -0700</pubDate>
+            <sparkle:version>4</sparkle:version>
+            <sparkle:shortVersionString>1.3</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>13.0</sparkle:minimumSystemVersion>
+            <enclosure url="https://dotstrip.app/DotStrip-1.3.zip" length="3547596" type="application/octet-stream" sparkle:edSignature="lx4mVIQzp7eae5GXcVKnA2NX3dcYMuhYoh/XTERTcWIcs0ni7aTZFuL0pnv6Iwg6xh3mgviyOOi7Qzdb24EwBA=="/>
+            <sparkle:deltas>
+                <enclosure url="https://dotstrip.app/DotStrip4-3.delta" sparkle:deltaFrom="3" length="265610" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="976464" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="JLkInEVpaFPpqbVCjHu7bCGaxU1tRrFq9t084BzzcZF8eRvRuep4ROAST1jddF6vpTzHXCv5SjBnkChvRm1ZCw=="/>
+                <enclosure url="https://dotstrip.app/DotStrip4-2.delta" sparkle:deltaFrom="2" length="265090" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="976464" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="8d35OHby0lF9ELLWl9SGcaGXoYxGcp75OKmNJRZlG2f8zOR3LSGPCNN4q7vhMjbpzj6+xL7vi/HxN9Mc3+hfAg=="/>
+            </sparkle:deltas>
+            <description><![CDATA[<h3>What's new in 1.3</h3>
+<ul>
+  <li><b>Lifetime license.</b> DotStrip is now a one-time purchase, $9.99, with no subscription. If you already subscribe, nothing changes for you.</li>
+  <li><b>Pink.</b> A new hot-pink color for the board, in the neon-sign spirit.</li>
+  <li><b>One band, everything scrolling.</b> The shared band is now one continuous line that every widget takes its turn in: countdowns, now playing, weather, stocks and headlines, so you can have them all on at once.</li>
+  <li><b>Custom timers.</b> A new Timers widget. Start a preset from the board or the menu, add your own lengths like 5m or 1h30m, and watch the countdown on the strip.</li>
+  <li><b>Drag to resize.</b> Drag the seams between widgets, or between a graphic and the band, to make each one as wide as you want. Your sizes are remembered, and Reset Width puts them back.</li>
+  <li><b>Smoother resizing.</b> Resizing no longer lags while you drag.</li>
+  <li><b>High Contrast mode.</b> A brighter, bolder board that is easier to read.</li>
+  <li><b>A tidier menu.</b> Settings are grouped under Board, Appearance and Widget Settings instead of one long list.</li>
+</ul>
+]]></description>
+        </item>
+        <item>
             <title>1.2</title>
             <pubDate>Fri, 02 Oct 2026 22:21:19 -0600</pubDate>
             <sparkle:version>3</sparkle:version>
