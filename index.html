@@ -28,6 +28,7 @@
     <ul>
       <li><a href="#widgets">Widgets</a></li>
       <li><a href="#menu">Settings</a></li>
+      <li><a href="changelog.html">Changelog</a></li>
       <li><a href="#pricing">Try it</a></li>
       <li><a href="#faq">FAQ</a></li>
       <li><a class="btn primary" style="padding:8px 16px;font-size:14px" href="#pricing">Download</a></li>
@@ -43,6 +44,7 @@
       <a class="btn ghost" href="#widgets">See what it shows</a>
     </div>
     <p class="fine">7-day free trial. No account needed to try it.</p>
+    <a class="whatsnew" href="changelog.html"><b>New in 1.3</b> Pink, Timers, drag-to-resize <span aria-hidden="true">&rarr;</span></a>
 
     <div class="menubar-clip"><div class="menubar"><img src="assets/strip.svg" alt=""><div class="panel"><div class="clip" role="img" aria-label="The DotStrip panel in the macOS menu bar, scrolling a track title next to an AAPL stock quote and the temperature"><video data-clip="bar" width="1440" height="66" muted loop playsinline autoplay preload="auto" disablepictureinpicture aria-hidden="true"></video></div></div></div></div>
 
@@ -55,6 +57,7 @@
           <button data-theme="amber" style="--c:#ffb838" aria-label="Amber" aria-pressed="true"></button>
           <button data-theme="green" style="--c:#47ff70" aria-label="Green"></button>
           <button data-theme="red"   style="--c:#ff4536" aria-label="Red"></button>
+          <button data-theme="pink"  style="--c:#ff5cb3" aria-label="Pink"></button>
           <button data-theme="ice"   style="--c:#6bd1ff" aria-label="Ice"></button>
           <button data-theme="mono"  style="--c:#f0f2ff" aria-label="White"></button>
         </div>
@@ -62,10 +65,21 @@
     </div>
   </header>
 
+  <section id="new">
+    <div class="eyebrow">New in 1.3</div>
+    <h2>A new color, a timer, and a board you can shape.</h2>
+    <div class="facts">
+      <div class="fact"><b>Hot pink</b><span>A sixth color in the neon-sign spirit. <a class="inline" href="#colors" data-theme="pink">Light up the board above in pink.</a></span></div>
+      <div class="fact"><b>Timers</b><span>Start a countdown from the board itself and watch it run along the strip. <a class="inline" href="#timers">See the widget.</a></span></div>
+      <div class="fact"><b>Drag to resize</b><span>Pull the seams between widgets to make each as wide as you like. Your sizes are remembered, and High Contrast gives the board a deeper black background.</span></div>
+    </div>
+    <p class="fine" style="margin-top:22px"><a class="inline" href="changelog.html">Read the full changelog &rarr;</a></p>
+  </section>
+
   <section id="widgets">
     <div class="eyebrow">Widgets</div>
-    <h2>Four things worth a glance, and a dog.</h2>
-    <p class="sub">Turn on as many as you like. They share the board side by side, each in its own zone, and a playing track takes the wide lane from the news until the music stops. Or switch them all off and hand the whole board to a graphic.</p>
+    <h2>Five things worth a glance, and a dog.</h2>
+    <p class="sub">Turn on as many as you like. Give each its own zone, or put them all on one band that scrolls the lot, one after another. Or switch them all off and hand the whole board to a graphic.</p>
     <div class="grid">
       <div class="card"><div class="board"><div class="clip" role="img" aria-label="Now Playing widget: a scrolling track title"><video data-clip="card-music" width="1008" height="154" muted loop playsinline autoplay preload="none" disablepictureinpicture aria-hidden="true"></video></div></div>
         <h3>Now Playing</h3><p>The track and artist from Spotify or Apple Music, with a thin progress bar riding along the top row.</p></div>
@@ -75,6 +89,8 @@
         <h3>Stocks</h3><p>Quotes for the symbols you track, with a little arrow for which way the day is going.</p></div>
       <div class="card"><div class="board"><div class="clip" role="img" aria-label="Weather widget: temperature, high and low"><video data-clip="card-weather" width="960" height="264" muted loop playsinline autoplay preload="none" disablepictureinpicture aria-hidden="true"></video></div></div>
         <h3>Weather</h3><p>The temperature in a fixed zone that flips between now, today's high and today's low, with an animated sun and rain. Pick your city from a search so you get the right Springfield.</p></div>
+      <div class="card" id="timers"><div class="board"><div class="clip" role="img" aria-label="Timers widget: a row of preset lengths, then an hourglass and a countdown with a bar along the top row shrinking"><video data-clip="card-timer" width="1008" height="154" muted loop playsinline autoplay preload="none" disablepictureinpicture aria-hidden="true"></video></div></div>
+        <h3>Timers <span class="tag">New</span></h3><p>Start a preset like 5M or 25M straight from the board, or add your own lengths such as 90s or 1h30m. An hourglass empties as the time runs down, and a finished timer flashes so you cannot miss it.</p></div>
       <div class="card"><div class="board"><div class="clip" role="img" aria-label="Graphics mode: a small pixel dog trotting along the panel"><video data-clip="dog" width="1008" height="154" muted loop playsinline autoplay preload="none" disablepictureinpicture aria-hidden="true"></video></div></div>
         <h3>Graphics mode</h3><p>Hand the whole panel to an animation instead. This dog trots, sniffs around, sits and wags, and now and then curls up to sleep. There are more to pick from in the app.</p></div>
     </div>
@@ -96,11 +112,11 @@
     <h2>Everything lives in one menu.</h2>
     <p class="sub">Click the panel and you get the lot. No preferences window, no dock icon. The grey rows at the top are a plain-text read-out of whatever has already scrolled past.</p>
     <div class="menu-feature">
-      <img src="assets/menu.png" alt="The DotStrip menu: widget toggles, news feed and symbols, location and units, layout, color, HDR Glow and scroll speed" loading="lazy">
+      <img src="assets/menu.png" alt="The DotStrip menu: widget toggles, with settings grouped under Board, Appearance and Widget Settings" loading="lazy">
       <ul class="bullets">
-        <li><b>Show what you want.</b> Switch each widget on or off, pick any RSS feed, edit your stock symbols.</li>
-        <li><b>Layout.</b> Give each widget its own zone, or let them share one band and take turns.</li>
-        <li><b>Five colors.</b> Amber, Green, Red, Ice and White, each with its own panel tint, as on real signs.</li>
+        <li><b>Show what you want.</b> Switch each widget on or off, then tune it under Widget Settings: any RSS feed, your stock symbols, your city, your timer lengths.</li>
+        <li><b>Board.</b> Give each widget its own zone, or let them share one band and take turns. Drag the seams to size them, and Reset Width puts them back.</li>
+        <li><b>Appearance.</b> Six colors, Amber, Green, Red, Pink, Ice and White, each with its own panel tint, as on real signs. Plus High Contrast for a deeper black background.</li>
         <li><b>HDR Glow.</b> On macOS 26 with a capable display, the lit dots push brighter than white.</li>
         <li><b>Scroll speed</b> to taste.</li>
       </ul>
@@ -116,10 +132,11 @@
         <h3>DotStrip</h3>
         <span style="color:var(--dim)">Everything in the app, nothing held back.</span>
         <ul>
-          <li>All four widgets and every color scheme</li>
+          <li>All five widgets and every color scheme</li>
           <li>Automatic updates through the app</li>
           <li>One payment of $9.99, no subscription</li>
           <li>Signed and notarized by Apple</li>
+          <li>Lifetime license keys only work in version 1.3 or later</li>
         </ul>
       </div>
       <div class="side">
@@ -135,7 +152,7 @@
     <h2>Questions.</h2>
     <details><summary>What do I need?</summary><p>A Mac running macOS 13 Ventura or later. There is no Dock icon and no window: DotStrip is just the board in your menu bar, and clicking it opens the settings.</p></details>
     <details><summary>What happens after the 7 days?</summary><p>The board stops until you buy a lifetime license. You'll get a prompt where you can buy one or enter a license key you already have.</p></details>
-    <details><summary>What does the lifetime license cover?</summary><p>A one-time payment unlocks DotStrip on your Macs for good, with no renewals. It includes updates to the app. The key is in your Polar receipt, and the app keeps working offline.</p></details>
+    <details><summary>What does the lifetime license cover?</summary><p>A one-time payment unlocks DotStrip on your Macs for good, with no renewals. It includes updates to the app. The key is in your Polar receipt, and the app keeps working offline. Lifetime keys can only be redeemed in version 1.3 or later, so if you have an older version, choose Check for Updates from the DotStrip menu first.</p></details>
     <details><summary>What permissions does it want?</summary><p>Only Automation, the first time Now Playing looks for Spotify or Music. If you say no, that widget stays empty and nothing else is affected.</p></details>
     <details><summary>Where does the data come from?</summary><p>Weather from Open-Meteo, stock quotes from Yahoo Finance, headlines from the feeds you choose. None of them needs an account or API key, and DotStrip keeps no analytics on you. See the <a href="privacy.html" style="color:var(--on)">privacy policy</a>.</p></details>
     <details><summary>Will it burn my battery?</summary><p>No. It is designed to redraw as little as possible, and you can pick a slower scroll speed from the menu.</p></details>
@@ -146,7 +163,7 @@
 <footer>
   <div class="wrap">
     <span>&copy; 2026 Daniel Moreno. DotStrip is not affiliated with Apple, Spotify or Yahoo.</span>
-    <span><a href="privacy.html">Privacy</a><a href="terms.html">Terms</a><a href="support.html">Support</a></span>
+    <span><a href="changelog.html">Changelog</a><a href="privacy.html">Privacy</a><a href="terms.html">Terms</a><a href="support.html">Support</a></span>
   </div>
 </footer>
 

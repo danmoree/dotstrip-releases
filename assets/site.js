@@ -19,6 +19,7 @@ const THEMES = {
   amber: { on: [255, 184, 56],  panel: "#0f0d0a" },
   green: { on: [71, 255, 112],  panel: "#070f09" },
   red:   { on: [255, 69, 54],   panel: "#120808" },
+  pink:  { on: [255, 92, 179],  panel: "#12080d" },
   ice:   { on: [107, 209, 255], panel: "#070d12" },
   mono:  { on: [240, 242, 255], panel: "#0d0d0f" },
 };
