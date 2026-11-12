@@ -19,6 +19,7 @@
 <link rel="icon" href="assets/icon.png">
 <link rel="stylesheet" href="assets/style.css">
 <link rel="stylesheet" href="assets/menubar.css">
+<link rel="stylesheet" href="assets/gallery.css">
 <script defer src="https://cloud.umami.is/script.js" data-website-id="881c015a-dc13-47d8-9dbd-c91f7316cd93"></script>
 </head>
 <body>
@@ -49,9 +50,7 @@
     <div class="menubar-clip"><div class="menubar"><img src="assets/strip.svg" alt=""><div class="panel"><div class="clip" role="img" aria-label="The DotStrip panel in the macOS menu bar, scrolling a track title next to an AAPL stock quote and the temperature"><video data-clip="bar" width="1440" height="66" muted loop playsinline autoplay preload="auto" disablepictureinpicture aria-hidden="true"></video></div></div></div></div>
 
     <div class="zoom" id="colors">
-      <div class="board"><div class="clip" role="img" aria-label="A live, zoomed-in copy of the DotStrip panel"><video data-clip="hero" width="2112" height="132" muted loop playsinline autoplay preload="auto" disablepictureinpicture aria-hidden="true"></video></div></div>
       <div class="zoom-label">
-        <span>Live and zoomed in. Every dot is a dot in the app.</span>
         <div class="swatches" role="group" aria-label="Board color">
           <span>Color</span>
           <button data-theme="amber" style="--c:#ffb838" aria-label="Amber" aria-pressed="true"></button>
@@ -96,6 +95,24 @@
     </div>
   </section>
 
+  <section id="screenshots">
+    <div class="eyebrow">Screenshots</div>
+    <h2>See it on a real Mac.</h2>
+    <p class="sub">Every color, each on a wallpaper that suits it. Click any shot to see it full size.</p>
+    <figure class="demo">
+      <video controls playsinline preload="metadata" poster="assets/demo-poster.jpg" aria-label="A short screen recording: turning DotStrip widgets on and off, starting a timer and picking a board color from the menu"><source src="assets/demo.mp4" type="video/mp4"></video>
+      <figcaption><b>See it in action.</b> Switch widgets on and off, start a timer, pick a color. All from the menu.</figcaption>
+    </figure>
+    <div class="shots">
+      <button class="shot wide" type="button" data-title="Everything at once" data-text="Stocks, a timer and the weather, side by side on one band." data-full="assets/shots/hero.jpg"><span class="frame"><img src="assets/shots/hero.jpg" alt="DotStrip in the macOS menu bar on a dark wallpaper, showing a news headline, a stock quote, a timer and the temperature" loading="lazy"></span><span class="cap"><b>Everything at once</b><span>Stocks, a timer and the weather, side by side on one band.</span></span></button>
+      <button class="shot mid" type="button" data-title="Amber" data-text="The classic sign. Here with the dog, a track title and a stock quote." data-full="assets/shots/amber.jpg"><span class="frame"><img src="assets/shots/amber.jpg" alt="DotStrip in amber on a desert wallpaper, with the dog, a track title and a stock quote" loading="lazy"></span><span class="cap"><b>Amber</b><span>The classic sign. Here with the dog, a track title and a stock quote.</span></span></button>
+      <button class="shot mid" type="button" data-title="Ice" data-text="Cool blue, with a timer counting down next to the weather." data-full="assets/shots/ice.jpg"><span class="frame"><img src="assets/shots/ice.jpg" alt="DotStrip in ice blue on a blue wallpaper, showing a track title, a timer and the weather" loading="lazy"></span><span class="cap"><b>Ice</b><span>Cool blue, with a timer counting down next to the weather.</span></span></button>
+      <button class="shot mid" type="button" data-title="Pink" data-text="New in 1.3. A sixth color in the neon-sign spirit." data-full="assets/shots/pink.jpg"><span class="frame"><img src="assets/shots/pink.jpg" alt="DotStrip in hot pink on a pink wallpaper, showing a track title, a timer and a stock arrow" loading="lazy"></span><span class="cap"><b>Pink</b><span>New in 1.3. A sixth color in the neon-sign spirit.</span></span></button>
+      <button class="shot mid" type="button" data-title="Red" data-text="Warm red, over deep greens and oranges." data-full="assets/shots/red.jpg"><span class="frame"><img src="assets/shots/red.jpg" alt="DotStrip in red on a dark wallpaper, showing a track title, a timer and the weather" loading="lazy"></span><span class="cap"><b>Red</b><span>Warm red, over deep greens and oranges.</span></span></button>
+      <button class="shot mid" type="button" data-title="White" data-text="Clean and neutral. Stocks, a timer and the temperature." data-full="assets/shots/white.jpg"><span class="frame"><img src="assets/shots/white.jpg" alt="DotStrip in white on a black wallpaper, showing a stock quote, a timer and the temperature" loading="lazy"></span><span class="cap"><b>White</b><span>Clean and neutral. Stocks, a timer and the temperature.</span></span></button>
+    </div>
+  </section>
+
   <section>
     <div class="eyebrow">Made like hardware</div>
     <h2>It scrolls like a sign, not like text.</h2>
@@ -112,7 +129,7 @@
     <h2>Everything lives in one menu.</h2>
     <p class="sub">Click the panel and you get the lot. No preferences window, no dock icon. The grey rows at the top are a plain-text read-out of whatever has already scrolled past.</p>
     <div class="menu-feature">
-      <img src="assets/menu.png" alt="The DotStrip menu: widget toggles, with settings grouped under Board, Appearance and Widget Settings" loading="lazy">
+      <img src="assets/menu.webp" alt="The DotStrip menu open under the strip: widget toggles for Now Playing, News Ticker, Stocks, Timers and Weather, with Timers, Widget Settings, Board and Appearance below" width="1424" height="1174" loading="lazy">
       <ul class="bullets">
         <li><b>Show what you want.</b> Switch each widget on or off, then tune it under Widget Settings: any RSS feed, your stock symbols, your city, your timer lengths.</li>
         <li><b>Board.</b> Give each widget its own zone, or let them share one band and take turns. Drag the seams to size them, and Reset Width puts them back.</li>
@@ -168,5 +185,6 @@
 </footer>
 
 <script src="assets/site.js"></script>
+<script src="assets/gallery.js"></script>
 </body>
 </html>

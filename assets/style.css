@@ -131,14 +131,14 @@ footer a:hover { color: var(--ink); }
 .doc .meta { color: var(--faint); font: 13px var(--mono); }
 
 /* menu section */
-.menu-feature { display: grid; grid-template-columns: minmax(0, 340px) 1fr; gap: 44px; align-items: center; }
+.menu-feature { display: grid; grid-template-columns: minmax(0, 520px) 1fr; gap: 44px; align-items: center; }
 .menu-feature img { width: 100%; height: auto; border-radius: 14px; border: 1px solid var(--line); box-shadow: 0 24px 70px rgba(0,0,0,.6); }
 .bullets { list-style: none; padding: 0; margin: 0; }
 .bullets li { padding: 10px 0 10px 28px; position: relative; color: var(--dim); }
 .bullets li b { color: var(--ink); }
 .bullets li::before { content: ""; position: absolute; left: 4px; top: 21px; width: 8px; height: 8px; border-radius: 50%;
   background: var(--on); box-shadow: 0 0 10px var(--on); }
-@media (max-width: 760px) { .menu-feature { grid-template-columns: 1fr; gap: 26px; } .menu-feature img { max-width: 340px; } }
+@media (max-width: 760px) { .menu-feature { grid-template-columns: 1fr; gap: 26px; } .menu-feature img { max-width: 100%; } }
 
 /* on a phone, show the right-hand end of the menu bar large instead of the whole bar tiny */
 .menubar-clip { margin: 40px auto 0; width: min(1040px, 100%); }

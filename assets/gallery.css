@@ -1,0 +1,76 @@
+/* screenshot gallery + lightbox */
+.shots { display: grid; grid-template-columns: repeat(2, 1fr); gap: 18px; }
+.shot {
+  appearance: none; display: block; width: 100%; padding: 0; margin: 0; text-align: left; cursor: zoom-in;
+  background: var(--card); border: 1px solid var(--line); border-radius: 16px; overflow: hidden; color: inherit; font: inherit;
+  transition: transform .2s, border-color .2s, box-shadow .2s;
+}
+.shot:hover, .shot:focus-visible {
+  transform: translateY(-3px); border-color: rgba(var(--on-rgb), .45);
+  box-shadow: 0 18px 50px rgba(0,0,0,.55), 0 0 30px rgba(var(--on-rgb), .12); outline: none;
+}
+.shot { display: flex; flex-direction: column; }
+.shot .frame { position: relative; display: block; overflow: hidden; background: #000; flex: none; }
+.shot img { position: absolute; inset: 0; display: block; width: 100%; height: 100%; object-fit: cover; transition: transform .5s; }
+.shot:hover img { transform: scale(1.03); }
+.shot.wide { grid-column: 1 / -1; }
+.shot.wide .frame { aspect-ratio: 2400 / 480; }
+.shot.tall { grid-row: span 2; }
+.shot.tall .frame { flex: 1; min-height: 340px; }
+.shot.tall img { object-position: 30% 0; }
+.shot.mid { grid-column: auto; }
+.shot.mid .frame { aspect-ratio: 1600 / 600; }
+.shot .cap { display: block; padding: 14px 18px 16px; }
+.shot .cap b { display: block; font: 650 16px var(--sans); }
+.shot .cap span { display: block; margin-top: 2px; color: var(--dim); font-size: 14.5px; line-height: 1.45; }
+@media (max-width: 760px) {
+  .shots { grid-template-columns: 1fr; gap: 12px; }
+  .shot.tall, .shot.mid { grid-row: auto; grid-column: auto; }
+  .shot.tall .frame { flex: none; aspect-ratio: 4 / 3; min-height: 0; }
+  .shot .cap { padding: 12px 14px 14px; }
+}
+
+.lb {
+  position: fixed; inset: 0; z-index: 100; display: none; align-items: center; justify-content: center; flex-direction: column;
+  background: rgba(4,3,2,.92); backdrop-filter: blur(8px); padding: 28px 70px;
+}
+.lb.open { display: flex; animation: lbin .18s ease-out; }
+@keyframes lbin { from { opacity: 0; } to { opacity: 1; } }
+.lb figure { margin: 0; max-width: min(1400px, 100%); display: flex; flex-direction: column; align-items: center; min-height: 0; }
+.lb img {
+  max-width: 100%; max-height: calc(100vh - 150px); width: auto; height: auto; border-radius: 12px;
+  border: 1px solid var(--line); box-shadow: 0 30px 90px rgba(0,0,0,.7);
+}
+.lb figcaption { margin-top: 16px; text-align: center; color: var(--dim); font-size: 15px; }
+.lb figcaption b { color: var(--ink); font-weight: 650; margin-right: 8px; }
+.lb .count { font: 500 12px var(--mono); letter-spacing: .12em; color: var(--faint); margin-top: 6px; }
+.lb button {
+  position: absolute; appearance: none; border: 1px solid var(--line); background: rgba(255,255,255,.05); color: var(--ink);
+  width: 44px; height: 44px; border-radius: 50%; font: 400 22px/1 var(--sans); cursor: pointer; display: grid; place-items: center;
+  transition: background .15s, border-color .15s;
+}
+.lb button:hover, .lb button:focus-visible { background: rgba(var(--on-rgb), .16); border-color: rgba(var(--on-rgb), .5); outline: none; }
+.lb .x { top: 18px; right: 18px; }
+.lb .prev { left: 14px; top: 50%; transform: translateY(-50%); }
+.lb .next { right: 14px; top: 50%; transform: translateY(-50%); }
+@media (max-width: 640px) {
+  .lb { padding: 64px 14px 90px; }
+  .lb .prev, .lb .next { top: auto; bottom: 22px; transform: none; }
+  .lb .prev { left: calc(50% - 56px); } .lb .next { right: calc(50% - 56px); }
+}
+
+/* demo video */
+.demo { margin: 0 auto 26px; max-width: 900px; }
+.demo video { display: block; width: 100%; height: auto; aspect-ratio: 1400 / 1144; background: #000; border-radius: 16px; border: 1px solid var(--line); box-shadow: 0 24px 70px rgba(0,0,0,.6); }
+.demo figcaption { margin-top: 12px; text-align: center; color: var(--dim); font-size: 15px; }
+.demo figcaption b { color: var(--ink); font-weight: 650; }
+
+/* an odd tile out at the end spans the row */
+.shots > .shot.mid:last-child:nth-child(even) { grid-column: 1 / -1; }
+.shots > .shot.mid:last-child:nth-child(even) .frame { aspect-ratio: 2400 / 480; }
+.shots > .shot.mid:last-child:nth-child(even) img { object-position: 50% 0; }
+@media (max-width: 760px) { .shots > .shot.mid:last-child:nth-child(even) .frame { aspect-ratio: 1600 / 600; } }
+
+/* the colour switcher stands alone under the hero clip */
+.zoom { margin-top: 26px; }
+.zoom .zoom-label { justify-content: center; margin-top: 0; }
